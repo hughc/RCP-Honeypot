@@ -16,18 +16,18 @@ class RCP_Honeypot {
 	}
 
 	public function error_checks() {
-		if( ! empty( $_POST['rcp_phone_field_002'] ) ) {
+		if( ! empty( $_POST['rcp_hp_phone_field_002'] ) ) {
 			rcp_errors()->add( 'spammer', __( 'Nice try spammer, feel free to try again', 'rcp' ), 'register' );
 		}
 	}
 
 	public function honeypot_field() {
 		?>
-		<p id="rcp_validation_wrap" style='display:none; position: absolute!important; left: -9000px;'>
-			<label for="rcp_phone_field_002">Phone</label>
-			<input name="rcp_phone_field_002" id="rcp_phone_field_002" type="text" placeholder="Phone">
+		<p id="rcp_hp_phone_field_002_wrap" style='display:none; position: absolute!important; left: -9000px;'>
+			<label for="rcp_hp_phone_field_002">Phone</label>
+			<input name="rcp_hp_phone_field_002" id="rcp_hp_phone_field_002" type="text" placeholder="Phone">
 		</p>
-		<?
+		<?php
 	}
 
 }
